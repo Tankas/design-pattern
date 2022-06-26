@@ -1,0 +1,32 @@
+@startuml Factory
+
+interface Product {
+    + sayName(): void
+}
+
+class ProductA {
+    + sayName()
+}
+
+class ProductB {
+    + sayName()
+}
+
+Product <|... ProductA
+Product <|... ProductB
+
+class Factory {
+ {static} + createProduct(): Product
+}
+
+
+ProductA <.. Factory
+ProductB <.. Factory
+
+class client {}
+
+Factory <.. client
+Product <.. client
+
+
+@enduml

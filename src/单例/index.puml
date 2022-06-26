@@ -1,0 +1,16 @@
+@startuml Single
+
+class Single {
+    {static} - instance: Single
+    + getSingle(): Single
+    - constructor()
+}
+
+Single <|--- Single
+
+class client {}
+client ..> Single
+
+
+
+@enduml
