@@ -1,25 +1,25 @@
 /*
  * @Author: tanka 984086816@qq.com
  * @Date: 2022-07-11 14:36:19
- * @LastEditors: tanka 984086816@qq.com
- * @LastEditTime: 2022-07-11 15:25:40
+ * @LastEditors: tanka 
+ * @LastEditTime: 2023-09-11 19:36:36
  * @FilePath: /design-pattern/src/建造者/index.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 class Product {
-    private partA: String;
-    private partB: String;
-    private partC: String;
+    private partA: string;
+    private partB: string;
+    private partC: string;
     // 鼠标
-    setPartA(partA: String) {
+    setPartA(partA: string) {
         this.partA = partA
     }
     // 键盘
-    setPartB(partB: String) {
+    setPartB(partB: string) {
         this.partB = partB
     }
     // 显示器
-    setPartC(partC: String) {
+    setPartC(partC: string) {
         this.partC = partC
     }
     show() {
@@ -28,18 +28,18 @@ class Product {
     }
 }
 
-abstract class Ibuild {
+abstract class IBuild {
     protected pro = new Product();
     abstract createPartA(): void
     abstract createPartB(): void
     abstract createPartC(): void
-    public returnReuslt() {
+    public returnResult() {
         return this.pro
     }
     
 }
 
-class Build extends Ibuild {
+class Build extends IBuild {
     createPartA() {
         this.pro.setPartA('鼠标');
     }
@@ -65,7 +65,7 @@ class Directer {
         this.builder.createPartA();
         this.builder.createPartB();
         this.builder.createPartC();
-        return this.builder.returnReuslt()
+        return this.builder.returnResult()
     }
     
 }
