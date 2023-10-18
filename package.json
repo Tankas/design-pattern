@@ -8,7 +8,7 @@
     "precommit": "echo tes11t"
   },
   "pre-commit": [
-    "precommit"
+    "pre-commit"
   ],
   "repository": {
     "type": "git",
