@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "echo test"
+    "precommit": "echo tes11t"
   },
   "pre-commit": [
     "precommit"
